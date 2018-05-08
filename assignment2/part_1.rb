@@ -52,11 +52,12 @@ puts "9. Hash combine"
 puts hash_1.merge(hash_2)
 
 puts " "
-puts "10. Hash replacement"
-h.each {|k,v| x[k] = v}
+puts "10. Upcase values"
+hash_1 = {a: 'a', b: 'b', c: 'c', d: 'd', e: 'e'}
+puts hash_1.each{ |k,v| hash_1[k] = v.upcase!}
+
 
 puts " "
-puts "11. Upcase values"
+puts "11. Hash replacement"
 hash_1 = {a: 'a', b: 'b', c: 'c', d: 'd', e: 'e'}
 
-puts hash_1.each{ |k,v| hash_1[k] = v.upcase!}
