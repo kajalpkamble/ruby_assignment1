@@ -61,3 +61,10 @@ puts " "
 puts "11. Hash replacement"
 hash_1 = {a: 'a', b: 'b', c: 'c', d: 'd', e: 'e'}
 
+class Array
+  def map!
+    self.each_with_index do hash_1|key,value|
+      self[key] = yield(value)
+    end
+  end
+end

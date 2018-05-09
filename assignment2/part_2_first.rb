@@ -1,31 +1,22 @@
 #!/usr/bin/ruby -w
 
 
-def method_a
+   def method_a
 
-    l = -> (number1,number2) {number1+number2}
-    l.call(2 , 3)
-end
+      yield(3,4)
 
-def method_b
-    l = -> (number1,number2) {number1-number2}
-    l.call(2 , 3)
-end
+   end
 
-def method_c
-    l = -> (number1,number2) {number1*number2}
-    l.call(2 , 3)
-end
+method_a { |n1,n2,block| puts add = n1 + n2 }
+method_a { |n1,n2,block| puts subst = n1 - n2 }
+method_a { |n1,n2,block| puts mul = n1 * n2 }
+method_a { |n1,n2,block| puts div = n1 / n2 }
 
-def method_d
-    l = -> (number1,number2) {number1/number2}
-    l.call(2 , 3)
-end
 
-puts method_a
-puts method_b
-puts method_c
-puts method_d
+
+
+
+
 
 
 
